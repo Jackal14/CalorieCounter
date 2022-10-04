@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -70,6 +71,7 @@ public class CustomDataAdapter extends ArrayAdapter<Food> {
             holder.foodName = row.findViewById(R.id.name);
             holder.foodCalories = row.findViewById(R.id.calories);
             holder.foodDate = row.findViewById(R.id.dateText);
+            holder.photo = row.findViewById(R.id.pictureOfFood);
 
             row.setTag(holder);
 
@@ -84,6 +86,7 @@ public class CustomDataAdapter extends ArrayAdapter<Food> {
         holder.foodCalories.setText(String.valueOf(holder.food.getCalories()));
         //holder.foodDate.setText(holder.food.getRecordDate());App
         holder.foodDate.setText(String.valueOf(holder.food.getRecordDate()));
+        holder.photo.setImageBitmap(holder.food.getPhoto());
 
 
         return row;
@@ -92,6 +95,7 @@ public class CustomDataAdapter extends ArrayAdapter<Food> {
     public class ViewHolder{
         Food food;
         TextView foodName, foodCalories, foodDate;
+        ImageView photo;
     }
 }
 

@@ -8,36 +8,49 @@
 
     <LinearLayout
         android:id="@+id/layout"
-        android:layout_width="380dp"
-        android:layout_height="230dp"
-        android:orientation="vertical"
+        android:layout_width="401dp"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
         android:gravity="center_horizontal"
-        android:layout_centerHorizontal="true">
+        android:orientation="vertical">
 
         <EditText
             android:id="@+id/CaloriesFood"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:padding="14dp"
-            android:singleLine="true"
             android:layout_marginTop="18dp"
-            android:hint="@string/hintFood"/>
+            android:hint="@string/hintFood"
+            android:padding="14dp"
+            android:singleLine="true" />
 
         <EditText
             android:id="@+id/caloriesNumber"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:padding="14dp"
+            android:hint="@string/Calories"
             android:inputType="number"
-            android:singleLine="true"
-            android:hint="@string/Calories"/>
+            android:padding="14dp"
+            android:singleLine="true" />
 
         <Button
             android:id="@+id/submitButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:text="@string/submit_button"/>
+            android:text="@string/submit_button" />
+
+        <Button
+            android:id="@+id/cameraButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+
+        <ImageView
+            android:id="@+id/foodPicture"
+            android:layout_width="308dp"
+            android:layout_height="300dp"
+            tools:srcCompat="@tools:sample/avatars" />
+
     </LinearLayout>
 
 </RelativeLayout>

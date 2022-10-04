@@ -1,5 +1,7 @@
 package com.example.caloriecounter.model;
 
+import android.graphics.Bitmap;
+
 import java.io.Serializable;
 
 //Class that contains the data for what defines a food
@@ -8,6 +10,7 @@ public class Food implements Serializable {
 
     private String foodName, recordDate;
     private int calories, foodId;
+    private Bitmap photo;
     private static final long serialVersionUID = 10L;
 
 
@@ -57,6 +60,10 @@ public class Food implements Serializable {
     public void setFoodId(int foodId) {
         this.foodId = foodId;
     }
+
+    public Bitmap getPhoto(){return photo;}
+
+    public void setPhoto(Bitmap foodPic){this.photo = foodPic;}
 
     public static long getSerialVersionID() {
         return serialVersionUID;
